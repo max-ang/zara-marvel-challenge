@@ -1,0 +1,37 @@
+.header {
+  background-color: var(--dark-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.header__logo {
+  cursor: pointer;
+}
+
+.header__favs {
+  width: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.header__favs__icon {
+  width: 24px;
+  height: 22px;
+}
+
+.header__favs__count {
+  color: var(--light-color);
+}
+
+@media (min-width: 540px) {
+  .header {
+      padding: 16px var(--padding-container);
+  }
+}

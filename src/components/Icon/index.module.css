@@ -1,0 +1,22 @@
+.icon {
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-fav {
+  mask-image: url('/icons/state_default.svg');
+  background-color: var(--red-color);
+}
+
+.icon-fav-unselected {
+  mask-image: url('/icons/state_unselected.svg');
+  background-color: var(--light-color);
+}
+
+.icon-search {
+  mask-image: url('/icons/search_button.svg');
+  background-color: var(--dark-color);
+}

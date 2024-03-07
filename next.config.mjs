@@ -7,8 +7,7 @@ const nextConfig = {
         hostname: 'i.annihil.us',
       },
     ],
-  },
-  distDir: 'dist',
+  }
 };
 
 export default nextConfig;

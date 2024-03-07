@@ -2,7 +2,6 @@
 
 .swc
 /dist
-.env
 
 # dependencies
 /node_modules
@@ -30,7 +29,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-
+.env
+.env*.local
 
 # vercel
 .vercel

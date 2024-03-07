@@ -3,7 +3,7 @@ import generateCredentials from "@/utils/generateCredentials";
 export const getCharacters = async (query) => {
   const credentials = generateCredentials();
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/characters?limit=50${
+    `${process.env.API_URL}/characters?limit=50${
       query && `&nameStartsWith=${query}`
     }&${credentials}`
   );
@@ -18,7 +18,7 @@ export const getCharacters = async (query) => {
 
 export const getCharacterById = async (id) => {
   const credentials = generateCredentials();
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/characters/${id}?${credentials}`, { cache: 'no-store' });
+  const response = await fetch(`${process.env.API_URL}/characters/${id}?${credentials}`, { cache: 'no-store' });
   const data = await response.json();
 
   return {
@@ -28,7 +28,7 @@ export const getCharacterById = async (id) => {
 
 export const getComicsByCharacterId = async (id) => {
   const credentials = generateCredentials();
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/characters/${id}/comics?limit=20&orderBy=onsaleDate&${credentials}`);
+  const response = await fetch(`${process.env.API_URL}/characters/${id}/comics?limit=20&orderBy=onsaleDate&${credentials}`);
   const data = await response.json();
 
   return {
